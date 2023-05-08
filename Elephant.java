@@ -15,11 +15,12 @@ public class Elephant extends Actor
     public void act()
     {
         // Add your action code here.
-        if(Greenfoot.isKeyDown("d")){
-            move(5);
+        MouseInfo mouse = Greenfoot.getMouseInfo(); 
+         
+        if (mouse != null) 
+        {  
+           turnTowards(mouse.getX(), mouse.getY());  
         }
-        if(Greenfoot.isKeyDown("a")){
-            move(-5);
-        }
+        move(5);
     }
 }

@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Write a description of class Elephant here.
  * 
  * @author Adrian Lee 
- * @version 20230503
+ * @version 20230516
  */
 public class Elephant extends Actor
 {
@@ -22,5 +22,11 @@ public class Elephant extends Actor
            turnTowards(mouse.getX(), mouse.getY());  
         }
         move(5);
+        
+        if( isTouching(Apple.class) ) { 
+            removeTouching(Apple.class);
+          }
     }
+    
+    
 }

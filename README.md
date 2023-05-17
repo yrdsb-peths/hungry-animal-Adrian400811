@@ -1,4 +1,8 @@
-# Hungry Animal Tutorial
+# Hungry Animal by Adrian Lee
+## What is this
+I don't know.
+
+## Hungry Animal Tutorial
 This is the README.md file.
 Change this file to show your intended audience what you want them to see.
 

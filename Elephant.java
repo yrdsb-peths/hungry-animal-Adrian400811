@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Write a description of class Elephant here.
  * 
  * @author Adrian Lee 
- * @version 20230503
+ * @version 20230516
  */
 public class Elephant extends Actor
 {
@@ -15,12 +15,23 @@ public class Elephant extends Actor
     public void act()
     {
         // Add your action code here.
-        MouseInfo mouse = Greenfoot.getMouseInfo(); 
-         
-        if (mouse != null) 
-        {  
-           turnTowards(mouse.getX(), mouse.getY());  
+        int speed = 5;
+        if(Greenfoot.isKeyDown("")){
+            speed += 5;
         }
-        move(5);
+        if(Greenfoot.isKeyDown("d")){
+            move(speed);
+        }
+        if(Greenfoot.isKeyDown("a")){
+            move(-speed);
+        }
+        if(isTouching(Apple.class) ) { 
+            removeTouching(Apple.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createApple();
+            world.inScore();
+          }
     }
+    
+    
 }

@@ -15,12 +15,12 @@ public class Apple extends Actor
     public void act()
     {
         // Add your action code here.
-        if(Greenfoot.isKeyDown("d")){
-            move(5);
-        }
-        if(Greenfoot.isKeyDown("a")){
-            move(-5);
-        }
         setLocation(getX(), getY()+5);
+        
+        MyWorld world = (MyWorld) getWorld();
+        if(getY() >= world.getHeight()-1){
+            world.kill();
+            world.removeObject(this);
+        }
     }
 }

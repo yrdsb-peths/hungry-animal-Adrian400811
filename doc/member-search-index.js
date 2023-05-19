@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"Apple","l":"act()"},{"p":"<Unnamed>","c":"Elephant","l":"act()"},{"p":"<Unnamed>","c":"Apple","l":"Apple()","url":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"MyWorld","l":"createApple()"},{"p":"<Unnamed>","c":"Elephant","l":"Elephant()","url":"%3Cinit%3E()"},{"p":"<Unnamed>","c":"MyWorld","l":"MyWorld()","url":"%3Cinit%3E()"}]

@@ -1,15 +1,14 @@
 # Hungry Animal by Adrian Lee
 ## What is this
-I don't know.
+Do I look like I know?
+
+## How does it work
+Black Magic and luck, maybe.
+
+## How do I contribute?
+Don't touch stuff that works, fix those don't work.
 
 ## Hungry Animal Tutorial
-This is the README.md file.
-Change this file to show your intended audience what you want them to see.
-
-You can use **Markdown** syntax to format this file to do things like **bold** or *italicize* text.
-[Markdown basics](https://www.markdownguide.org/getting-started/)
-
-This particular repository is the starting template for the Hungry Elephant tutorial.
 
 [Part 1: Greenfoot Basics](https://youtu.be/zxaa3X0MihI)
 

@@ -19,7 +19,6 @@ public class Elephant extends Actor
         }
         for(int i = 0; i<swingL.length; i++){
                 swingL[i] = new GreenfootImage("images/elephant_idle/idle"+i+".png");
-                swingL[i] = swingL[i].mirrorHorizontally();
         }
     }
     

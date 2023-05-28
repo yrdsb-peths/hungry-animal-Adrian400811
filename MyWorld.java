@@ -32,15 +32,15 @@ public class MyWorld extends World
         sL.setValue("Score: "+score);
     }
     public void kill(){
-        Label goL = new Label("YOU DUMB", 100);
-        addObject(goL, 640, 360);
+        Label goL = new Label("Never let the mic down", 100);
+        addObject(goL, 640, 300);
         Label goS = new Label("Your Score: "+score, 50);
-        addObject(goS, 640, 460);
+        addObject(goS, 640, 500);
         removeObject(sL);
     }
     public void createApple(){
         Apple a = new Apple();
-        int appleX = Greenfoot.getRandomNumber(750);
+        int appleX = Greenfoot.getRandomNumber(1280);
         addObject(a, appleX, 100);
     }
 }

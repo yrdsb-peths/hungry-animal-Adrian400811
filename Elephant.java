@@ -9,28 +9,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Elephant extends Actor
 {
     GreenfootSound scream = new GreenfootSound("elephantcub.mp3");
-    GreenfootImage[] swing = new GreenfootImage[8];
-    GreenfootImage[] swingL = new GreenfootImage[8];
+    GreenfootImage swing = new GreenfootImage("elephant.png");
+    GreenfootImage swingL = new GreenfootImage("elephant.png");
+    
     boolean faceRight = true;
-
+    
     public Elephant(){
-        for(int i = 0; i<swing.length; i++){
-                swing[i] = new GreenfootImage("images/elephant_idle/idle"+i+".png");
-        }
-        for(int i = 0; i<swingL.length; i++){
-                swingL[i] = new GreenfootImage("images/elephant_idle/idle"+i+".png");
-                swingL[i] = swingL[i].mirrorHorizontally();
-        }
+        swingL.mirrorHorizontally();
     }
     
     int aIndex = 0;
     public void animate(){
         if(faceRight = true){
-            setImage(swing[aIndex]);
-            aIndex = (aIndex +1) %swing.length;
+            setImage(swing);
         } else {
-            setImage(swingL[aIndex]);
-            aIndex = (aIndex +1) %swingL.length;
+            setImage(swingL);
         }
     }
     
@@ -44,17 +37,18 @@ public class Elephant extends Actor
         if(Greenfoot.isKeyDown("d")){
             move(speed);
             faceRight = true;
+            animate();
         }
         if(Greenfoot.isKeyDown("a")){
             move(-speed);
             faceRight = false;
+            animate();
         }
         if(isTouching(Apple.class) ) { 
             removeTouching(Apple.class);
             MyWorld world = (MyWorld) getWorld();
             world.createApple();
             world.inScore();
-            animate();
             setImage("elephant.png");
             scream.play();
           }

@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Apple here.
+ * Object Apple
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Adrian Lee
+ * @version May 2023
  */
 public class Apple extends Actor
 {

@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * Main game scene.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Adrian Lee
+ * @version May 2023
  */
 public class MyWorld extends World
 {
@@ -34,7 +34,7 @@ public class MyWorld extends World
         createApple();
     }
     public void act(){
-        time = gameTime.millisElapsed()/1000;
+        time = gameTime.millisElapsed();
         tL.setValue("Time: "+ ((setTime - time)/1000));
     }
     public void inScore(){
@@ -55,11 +55,11 @@ public class MyWorld extends World
         removeObject(sL);
     }
     public void createApple(){
-        gameTime.mark();
         if(gameTime.millisElapsed() < setTime){
+            gameTime.mark();
             Apple a = new Apple();
             if(score%5 == 0){
-            a.inSpeed(1);
+                a.inSpeed(1);
             }
             int appleX = Greenfoot.getRandomNumber(1000);
             addObject(a, appleX, 100);

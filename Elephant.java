@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Elephant here.
+ * Object Elephant
  * 
  * @author Adrian Lee 
- * @version 20230516
+ * @version May 2023
  */
 public class Elephant extends Actor
 {
@@ -12,21 +12,11 @@ public class Elephant extends Actor
     GreenfootImage swing = new GreenfootImage("elephant.png");
     GreenfootImage swingL = new GreenfootImage("elephant.png");
     
-    boolean faceRight = true;
-    
     public Elephant(){
         swingL.mirrorHorizontally();
     }
     
     int aIndex = 0;
-    public void animate(){
-        if(faceRight = true){
-            setImage(swing);
-        } else {
-            setImage(swingL);
-        }
-    }
-    
     public void act()
     {
         // Add your action code here.
@@ -36,13 +26,11 @@ public class Elephant extends Actor
         }
         if(Greenfoot.isKeyDown("d")){
             move(speed);
-            faceRight = true;
-            animate();
+            setImage(swing);
         }
         if(Greenfoot.isKeyDown("a")){
             move(-speed);
-            faceRight = false;
-            animate();
+            setImage(swingL);
         }
         if(isTouching(Apple.class) ) { 
             removeTouching(Apple.class);
